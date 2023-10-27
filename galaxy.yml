@@ -5,7 +5,7 @@
 namespace: diademiemi
 
 # The name of the collection. Has the same character restrictions as 'namespace'
-name: template
+name: kubernetes_utils
 
 # The version of the collection. Must be compatible with semantic versioning
 version: 1.0.0
@@ -44,16 +44,16 @@ tags:
 dependencies: {}
 
 # The URL of the originating SCM repository
-repository: https://github.com/diademiemi/ansible_collection_diademiemi.template
+repository: https://github.com/diademiemi/ansible_collection_diademiemi.kubernetes_utils
 
 # The URL to any online docs
-documentation: https://github.com/diademiemi/ansible_collection_diademiemi.template
+documentation: https://github.com/diademiemi/ansible_collection_diademiemi.kubernetes_utils
 
 # The URL to the homepage of the collection/project
-homepage: https://github.com/diademiemi/ansible_collection_diademiemi.template
+homepage: https://github.com/diademiemi/ansible_collection_diademiemi.kubernetes_utils
 
 # The URL to the collection issue tracker
-issues: https://github.com/diademiemi/ansible_collection_diademiemi.template/issues
+issues: https://github.com/diademiemi/ansible_collection_diademiemi.kubernetes_utils/issues
 
 # A list of file glob-like patterns used to filter any files or directories that should not be included in the build
 # artifact. A pattern is matched from the relative path of the file or directory of the collection directory. This
