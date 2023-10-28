@@ -2,8 +2,8 @@ galaxy_info:
   author: diademiemi
   namespace: diademiemi
   company: diademiemi
-  description: Ansible role to install and configure cert_manager_selfsigned_ssl
-  role_name: cert_manager_selfsigned_ssl
+  description: Ansible role to install and configure selfsigned_ssl
+  role_name: selfsigned_ssl
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value

@@ -1,0 +1,10 @@
+ancestor: null
+releases:
+  2.0.0:
+    changes:
+      major_changes:
+      - add selfsigned_ssl role
+      release_summary: add first role
+    fragments:
+    - selfsigned_ssl.yml
+    release_date: '2023-10-28'

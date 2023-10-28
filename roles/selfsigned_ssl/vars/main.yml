@@ -1,5 +1,5 @@
 ---
-__role_name: "cert_manager_selfsigned_ssl"
+__role_name: "selfsigned_ssl"
 __role_file_search_order:
   - "{{ (ansible_facts['distribution'] | lower) | replace(' ', '_') }}_\
     {{ ansible_facts['distribution_release'] | lower | replace(' ', '_') }}_\

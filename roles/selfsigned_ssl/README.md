@@ -1,11 +1,11 @@
 Ansible Role Template
 =========
 
-[![Molecule Test](https://github.com/diademiemi/ansible_role_cert_manager_selfsigned_ssl/actions/workflows/molecule.yml/badge.svg)](https://github.com/diademiemi/ansible_role_cert_manager_selfsigned_ssl/actions/workflows/molecule.yml)
+[![Molecule Test](https://github.com/diademiemi/ansible_role_selfsigned_ssl/actions/workflows/molecule.yml/badge.svg)](https://github.com/diademiemi/ansible_role_selfsigned_ssl/actions/workflows/molecule.yml)
 
-This is an Ansible role to install and configure cert_manager_selfsigned_ssl.
+This is an Ansible role to install and configure selfsigned_ssl.
 
-Include more information about cert_manager_selfsigned_ssl in this section.
+Include more information about selfsigned_ssl in this section.
 
 Requirements
 ------------
@@ -43,11 +43,11 @@ Example Playbook
 ----------------
 
 ```yaml
-- name: Use diademiemi.cert_manager_selfsigned_ssl role
-  hosts: "{{ target | default('cert_manager_selfsigned_ssl') }}"
+- name: Use diademiemi.selfsigned_ssl role
+  hosts: "{{ target | default('selfsigned_ssl') }}"
   roles:
-    - role: "diademiemi.cert_manager_selfsigned_ssl"
-      tags: ['diademiemi', 'cert_manager_selfsigned_ssl', 'setup']    ```
+    - role: "diademiemi.selfsigned_ssl"
+      tags: ['diademiemi', 'selfsigned_ssl', 'setup']    ```
 
 ```
 
