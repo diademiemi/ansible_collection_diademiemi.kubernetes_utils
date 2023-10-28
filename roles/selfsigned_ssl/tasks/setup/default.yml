@@ -4,6 +4,7 @@
   kubernetes.core.helm_repository:
     name: "jetstack"
     repo_url: "https://charts.jetstack.io"
+  when: kubernetes_utils_selfsigned_ssl_helm_add_repo
 
 - name: "Install cert-manager"
   kubernetes.core.helm:
@@ -14,6 +15,7 @@
     namespace: "{{ kubernetes_utils_selfsigned_ssl_helm_chart_namespace }}"
     create_namespace: true
     values: "{{ kubernetes_utils_selfsigned_ssl_helm_chart_values }}"
+  when: kubernetes_utils_selfsigned_ssl_helm_install
 
 - name: "Add self signed ClusterIssuer"
   kubernetes.core.k8s:

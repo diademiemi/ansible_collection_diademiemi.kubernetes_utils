@@ -2,9 +2,11 @@
 kubernetes_utils_kubeconfig_path: ""  # Omitted by default
 kubenetes_utils_selfsigned_ssl_kubeconfig_path: "{{ kubeconfig_path }}"
 
+kubernetes_utils_selfsigned_ssl_helm_add_repo: true
 kubernetes_utils_selfsigned_ssl_helm_url: "https://charts.jetstack.io"
 kubernetes_utils_selfsigned_ssl_helm_repo_name: jetstack
 
+kubernetes_utils_selfsigned_ssl_helm_install: true
 kubernetes_utils_selfsigned_ssl_helm_chart_ref: "{{ kubernetes_utils_selfsigned_ssl_helm_repo_name }}/cert-manager"
 kubernetes_utils_selfsigned_ssl_helm_release_name: cert-manager
 kubernetes_utils_selfsigned_ssl_helm_chart_version: ""  # Omit
@@ -38,18 +40,19 @@ kubernetes_utils_selfsigned_ssl_signed_ca_issuer_spec:
   ca:
     secretName: "{{ kubernetes_utils_selfsigned_ssl_ca_secret_name }}"
 
-kubernetes_utils_selfsigned_ssl_signed_certs:
-  - name: selfsigned-signed-cert  # Required
-    namespace: cert-manager  # Required
-    ## The following are derived from name, not required
-    # common_name: selfsigned-signed-cert
-    # secret_name: selfsigned-signed-cert
-    ## The following are assumed and not required
-    # issuer_name: "{{ kubernetes_utils_selfsigned_ssl_signed_ca_issuer_name }}"
-    # issuer_kind: "{{ kubernetes_utils_selfsigned_ssl_signed_ca_issuer_kind }}"
-    # issuer_group: cert-manager.io\
-    ## This will default to FQDN if not specified
-    # dnsnames:
-    #   - "{{ ansible_fqdn }}"
+kubernetes_utils_selfsigned_ssl_signed_certs: []
+  # - name: selfsigned-signed-cert  # Required
+  #   namespace: default  # Required
+
+  #   # The following are derived from name, not required
+  #   common_name: selfsigned-signed-cert
+  #   secret_name: selfsigned-signed-cert
+  #   # The following are assumed and not required
+  #   issuer_name: "{{ kubernetes_utils_selfsigned_ssl_signed_ca_issuer_name }}"
+  #   issuer_kind: "{{ kubernetes_utils_selfsigned_ssl_signed_ca_issuer_kind }}"
+  #   issuer_group: cert-manager.io
+  #   # This will default to FQDN if not specified
+  #   dnsnames:
+  #     - "{{ ansible_fqdn }}"
 
 ...
