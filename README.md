@@ -9,8 +9,6 @@ Contents
 
 Roles
 ------
-Role | Description
---- | ---
 Role | Description | CI Status
 --- | --- | ---
 [diademiemi.kubernetes_utils.selfsigned_ssl](./roles/selfsigned_ssl/) | Create self signed SSL certificates with cert-manager | WIP
