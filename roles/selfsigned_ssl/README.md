@@ -98,14 +98,14 @@ Example Playbook
 ----------------
 
 ```yaml
-- name: Use diademiemi.selfsigned_ssl role
+- name: Use diademiemi.kubernetes_utils.selfsigned_ssl role
   hosts: "{{ target | default('selfsigned_ssl') }}"
   vars:
     kubernetes_utils_selfsigned_ssl_signed_certs:
       - name: awx-cert
         namespace: awx
   roles:
-    - role: "diademiemi.selfsigned_ssl"
+    - role: "diademiemi.kubernetes_utils.selfsigned_ssl"
       tags: ['diademiemi', 'selfsigned_ssl', 'setup']    ```
 
 ```

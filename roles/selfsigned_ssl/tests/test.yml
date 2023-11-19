@@ -1,5 +1,5 @@
 ---
-- name: Run diademiemi.selfsigned_ssl on localhost
+- name: Run diademiemi.kubernetes_utils.selfsigned_ssl on localhost
   hosts: localhost
   tasks:
     - name: "Ensure temporary roles directory exists"
@@ -12,7 +12,7 @@
         src: "{{ lookup('env', 'PWD') }}"
         dest: "~/.ansible/roles/{{ lookup('env', 'PWD') | basename }}"
         state: link
-    - name: "Include diademiemi.selfsigned_ssl"
+    - name: "Include diademiemi.kubernetes_utils.selfsigned_ssl"
       ansible.builtin.include_role:
         name: "{{ lookup('env', 'PWD') | basename }}"
     - name: "Remove temporary symlink in roles directory"
